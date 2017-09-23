@@ -9,24 +9,38 @@ Concepts
 
 Components:
 - Arduino
+- Raspberry Pi with Arduino IDE
 
 
-# Lesson 2 Making traffic lights
+# Lesson 2 Blink
 Concepts
-1. Resistors (Ohms law)
+1. Resistors (Ohms law) (ideally two different resistances)
 2. Breadboard
-3. LEDs
-4. Switch
+3. LEDs (minimum of two but ideally a few more)
 
 Components:
 - LED x 3
 - Resistors x 3 (minimum)
-- Switch
 - Arduino
 - Breadboard 
 - Wiring
 
-# Lesson 3 Sensors
+# Lesson 3 Motors
+Concepts
+1. Circuit diagrams
+2. Adding a motor to our circuit. 
+3. Two switches... speed & direction
+4. digitalWrite, analogWrite
+
+
+Components.
+- motor board.
+- Motors x1
+- Arduino
+- Breadboard & wires
+
+
+# Lesson 4 Sensors
 1. Distance sensor robot eyes.
 2. Components.
 - robot eyes
@@ -37,14 +51,7 @@ _ other sensors.
 - Wiring
 - resistors
 
-# Lesson 4 Motors
-1. Create a fan.
-2. Code the fan to invert and change diresction.
-3. Components.
-- motor board.
-- Motors x1
-- Arduino
-- Breadboard
+
 
 # Lesson 4 McGuyver
 1. Buy a toy from charity shop something with wheels.
