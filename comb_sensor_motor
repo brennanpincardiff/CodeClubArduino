@@ -1,0 +1,76 @@
+
+
+// defining the pins
+int aIa = 19;    // motor a
+int aIb = 20;    // motor a
+int bIa = 21;    // motor b
+int bIb = 18;    // motor b
+int trigPin = 9; 
+int echoPin = 10;
+
+// define variables
+long duration;
+int distance;
+
+void setup() {
+  // pin modes
+  pinMode(aIa, OUTPUT);
+  pinMode(aIb, OUTPUT);
+  pinMode(bIa, OUTPUT);
+  pinMode(bIb, OUTPUT);  
+  digitalWrite(aIa, LOW);
+  digitalWrite(aIb, LOW);
+  digitalWrite(bIa, LOW);
+  digitalWrite(bIb, LOW);  
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+
+void move_forwards(){
+
+  //Motor A forward
+//  digitalWrite(aIa, HIGH); // 
+//  digitalWrite(aIb, LOW);   // 
+
+  //Motor B forward
+  digitalWrite(bIa, HIGH);  // 
+  digitalWrite(bIb, LOW);   // 
+  
+}
+
+void turn_sidways(){
+
+  //Motor A forward 
+  digitalWrite(aIa, HIGH); // 
+  digitalWrite(aIb, LOW);   // 
+
+  //Motor B backward 
+  digitalWrite(bIa, LOW);  // 
+  digitalWrite(bIb, HIGH);   // 
+  
+}
+
+void loop() {
+  // use trigPin to get distance
+  // Clears the trigPin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(20);  
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration*0.034/2;
+
+  // depending on distance either move forward or turn
+  if(distance < 5){
+      move_forwards();
+  }else{
+       turn_sidways();
+   
+  }
+  
+  delay(1000);
+}
+
